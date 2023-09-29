@@ -32,8 +32,7 @@
 getPictureDims <- function(image) {
     svgDims <- c(xmlGetAttr(image, "width"),
                  xmlGetAttr(image, "height"))
-    # Remove "pt"
-    as.numeric(substring(svgDims, 1, nchar(svgDims) - 2))
+    as.numeric(svgDims)
 }
 
 nullFn <- function(...) { NULL }
